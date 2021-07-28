@@ -1,19 +1,13 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchDataCustomer } from '../actions/actions';
+import React from 'react'
+import { useSelector } from 'react-redux';
 import AppFrame from '../components/AppFrame.js/AppFrame'
 import CustomerList from '../components/CustomerList/CustomerList'
+import { useFetchCustomers } from '../Hooks/useFetchCustomers';
 
 
 const CostumerListContainer = () => {
-    const customers = useSelector(state => state.customer);
-    const dispatch = useDispatch();
-    useEffect(() => {
-
-        customers.length <= 0 && dispatch(fetchDataCustomer());
-        
-    }, [dispatch, customers])
-    
+    const {customers} = useSelector(state => state.customers);
+    useFetchCustomers(customers);
     return (
         <div>
                   <AppFrame

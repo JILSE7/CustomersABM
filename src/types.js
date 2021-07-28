@@ -1,4 +1,5 @@
 
 export const types = {
-    fetchCostumers : '[FETCH-COSTUMERS]'
+    fetchCostumers : '[FETCH-COSTUMERS]',
+    setCustomer : '[SET-CUSTOMER]'
 }

@@ -1,11 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import FormCustomer from '../Forms/FormCustomer'
+import { useParams } from 'react-router-dom';
+import AppFrame from '../AppFrame.js/AppFrame';
 
-const CustomerEdit = ({name, dni, age}) => {
+const CustomerEdit = () => {
+    const {dni} = useParams();
+
     return (
         <div>
-            <h2>Edicion del cliente</h2>
-            <h3>Nombre: {name} / Dni: {dni} / Age: {age}</h3>
+            <AppFrame
+            header="Editar Cliente"
+            center="center"
+            body={<FormCustomer dni={dni}/>}
+            />
         </div>
     )
 }

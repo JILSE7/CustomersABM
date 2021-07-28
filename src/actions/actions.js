@@ -1,9 +1,18 @@
 import { types } from "../types"
 
-const customers = [
-{dni: 1 , name: 'said', age: '24'},
-{dni: 2 , name: 'pepe', age: '24'},
-{dni: 3 , name: 'carlos', age: '24'},
-];
 //ACTIONS
-export const fetchDataCustomer = () => ({type: types.fetchCostumers, payload: customers});
+const fetchDataCustomer = (payload) => ({type: types.fetchCostumers, payload});
+export const setCustomerStore = (payload) => ({type:types.setCustomer, payload})
+
+export const getCustomers = () => {
+    return async(dispatch) => {
+        try {
+                const customers = await (await fetch('http://localhost:3001/customers')).json()
+                dispatch(fetchDataCustomer(customers));
+        } catch (error) {
+            console.log(error);
+        }   
+    }
+}
+
+

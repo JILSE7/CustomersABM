@@ -10,6 +10,7 @@ const Home = ({history}) => {
     
 
     const handlerClick = () => {
+
         history.push('/customers')
     }
 

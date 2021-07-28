@@ -1,0 +1,7 @@
+{
+    "customers" :[
+        {"dni": 402007 , "name": "said", "age": 24},
+        {"dni": 401687 , "name": "pepe", "age":  24},
+        {"dni": 401248 , "name": "carlos", "age": 24}
+        ]
+  }

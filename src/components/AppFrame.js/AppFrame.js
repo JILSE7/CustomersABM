@@ -3,12 +3,12 @@ import AppHeader from '../AppHeader/AppHeader';
 
 import PropTypes from 'prop-types'
 
-const AppFrame = ({header, body, footer}) => {
+const AppFrame = ({header, body, footer, center}) => {
     return (
         
-            <div >
+            <div className="text-center">
                         <AppHeader title={header}/>
-                        <div>{body}</div>
+                        <div className={center && center}>{body}</div>
                         <div>{"Aplicacion simple de ejemplo"}</div>
             </div>
             

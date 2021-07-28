@@ -6,6 +6,7 @@ import {
     Switch,
     Route
   } from "react-router-dom";
+import CustomerEdit from '../components/CustomerEdit/CustomerEdit';
 import CostumerListContainer from '../pages/CostumerListContainer';
 import CostumerNewContainer from '../pages/CostumerNewContainer';
 import CustomerContainer from '../pages/CustomerContainer';
@@ -24,6 +25,9 @@ const AppRouter = () => {
                 </Route>
                 <Route exact path="/customers/:dni">
                     <CustomerContainer/>        
+                </Route>
+                <Route exact path="/customers/:dni/edit">
+                    <CustomerEdit/>        
                 </Route>
             </Switch>
         </Router>

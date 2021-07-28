@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const reducers = combineReducers({
-    customer:  CustomerReducer,
+    customers:  CustomerReducer,
     
 })
 
