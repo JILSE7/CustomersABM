@@ -44,7 +44,8 @@
 
 .center{
     border: 1px solid black;
-    height: 400px;
+    height: 500px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +53,15 @@
 ._ Form{
     width: 100%;
     
-    
+
+    .alert{
+        width: 80%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        margin: 0 auto;
+        font-size: 16px;
+    }
 }
 
 

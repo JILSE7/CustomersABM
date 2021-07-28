@@ -24,7 +24,7 @@ const CustomerContainer = memo(() => {
                         <div>
                         <h3>Nombre: {customer.name}</h3>
                         <h4>Dni: {customer.dni}</h4>
-                        <h4>Edad: {customer.Age}</h4>
+                        <h4>Edad: {customer.age}</h4>
                         </div>
                     }
                     ></AppFrame> 

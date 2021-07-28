@@ -12,7 +12,9 @@ export const CustomerReducer = (state = {
             return {...state,customers:[...action.payload]};
         case types.setCustomer:
             return {...state,setCustomer:{...action.payload}};
-                
+         case types.putCustomer:
+                console.log(action.payload);
+         return state;
         default:
             return state;
     }

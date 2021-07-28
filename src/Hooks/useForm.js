@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 export const useForm = (inicialState={}) => {
-
-    const [values, setValues] = useState(inicialState)
-
+    
+    const [values, setValues] = useState({...inicialState})
+    
     const reset = (newState = inicialState)=>{
         setValues(newState)
     };

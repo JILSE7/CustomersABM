@@ -3,9 +3,14 @@ import PropTypes from 'prop-types'
 import FormCustomer from '../Forms/FormCustomer'
 import { useParams } from 'react-router-dom';
 import AppFrame from '../AppFrame.js/AppFrame';
+import { useFetchCustomers } from '../../Hooks/useFetchCustomers';
+import { useSelector } from 'react-redux';
 
 const CustomerEdit = () => {
+    
     const {dni} = useParams();
+    const {customers} = useSelector(state => state.customers);
+    useFetchCustomers(customers);
 
     return (
         <div>

@@ -8,12 +8,15 @@ import { useDispatch } from 'react-redux';
 const CustomerListItem = ({name, editAction, delAction, url, dni,age, index}) => {
     const history = useHistory();
     const dispatch = useDispatch();
-    const handlerCustomer = () => history.push(`${url}${dni}`);
-    const handlerEdit = () => {
-        dispatch(setCustomerStore({name, dni, age}));
-        history.push(`${url}${dni}/edit`)
 
+    const handlerCustomer = () => history.push(`${url}${dni}`);
+
+    const handlerEdit = () => {
+        dispatch(setCustomerStore({id: dni, name, dni, age}));
+        localStorage.setItem('us',JSON.stringify( {name,  dni, age}))
+        history.push(`${url}${dni}/edit`)
         ;}
+
     const handlerDelete = () => history.push(`${url}${dni}/delet`);
 
     return (
@@ -27,9 +30,6 @@ const CustomerListItem = ({name, editAction, delAction, url, dni,age, index}) =>
                             <td className="text-center"><button className="btn btn-danger" onClick={handlerDelete}>{delAction}</button></td>    
                         </tr>
                         </>
-
-
-        
     )
 }
 
