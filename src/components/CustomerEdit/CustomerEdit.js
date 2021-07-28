@@ -1,14 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import FormCustomer from '../Forms/FormCustomer'
-import { useParams } from 'react-router-dom';
+import FormCustomer from '../Forms/FormEditCustomer'
 import AppFrame from '../AppFrame.js/AppFrame';
 import { useFetchCustomers } from '../../Hooks/useFetchCustomers';
 import { useSelector } from 'react-redux';
 
 const CustomerEdit = () => {
     
-    const {dni} = useParams();
     const {customers} = useSelector(state => state.customers);
     useFetchCustomers(customers);
 
@@ -17,7 +15,7 @@ const CustomerEdit = () => {
             <AppFrame
             header="Editar Cliente"
             center="center"
-            body={<FormCustomer dni={dni}/>}
+            body={<FormCustomer disabled = {true}/>}
             />
         </div>
     )

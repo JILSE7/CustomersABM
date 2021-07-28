@@ -5,3 +5,8 @@ export const filterCustomer = (dni, state) => {
             
     
 }
+
+
+export const getnextId = (state) => Math.max(...state.map(item => item.dni ))
+
+

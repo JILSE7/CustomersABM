@@ -7,7 +7,7 @@ import { useForm } from '../../Hooks/useForm';
 
 
 
-export const FormCustomer = ({dni:id}) => {
+export const FormCustomer = ({disabled}) => {
   const history = useHistory();
   const {setCustomer} = useSelector(state => state.customers);
   let local;
@@ -51,11 +51,11 @@ export const FormCustomer = ({dni:id}) => {
                   </div>
                   <div className="mb-3">
                       <label className="form-label">DNI Customer</label>
-                      <input type="text" disabled className="form-control text-center" name="dni" value={dni} onChange={handleInputChange} />
+                      <input type="text" disabled={disabled} className="form-control text-center" name="dni" value={dni} onChange={handleInputChange} />
                   </div>
                   <div className="mb-3">
                       <label className="form-label">Age</label>
-                      <input type="number" className="form-control text-center" name="age" value={age} onChange={handleInputChange} />
+                      <input type="number" className="form-control text-center" name="age" value={Number(age)} onChange={handleInputChange} />
                   </div>
  
   

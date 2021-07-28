@@ -44,7 +44,7 @@ const CustomerList = ({customers, url, history}) => {
                 <div className="new-client">
                     <h3>Agregar nuevo Cliente</h3>
                     <div>
-                    <button onClick={() => console.log('hola')} className="btn btn-success" >Nuevo Cliente</button>
+                    <button onClick={() => history.push('/customers/new')} className="btn btn-success" >Nuevo Cliente</button>
                     </div>
                 </div>
         </>
